@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Контакты - Кафе "Карась"</title>
+<!-- Шрифт -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+<!-- Анимации -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+<style>
+@media(max-width: 600px) {
+  .header-top {
+    padding: 8px 10px;
+  }
+  .content {
+    margin: 80px auto 40px;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f5f0e6, #eae3d8);
+  margin: 0;
+  padding: 0;
+  color: #4d3b2b;
+}
+.header-info {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.strip {
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.top-strip {
+  background: linear-gradient(135deg, #dad4c0, #e7ddcf);
+}
+.menu-strip {
+  background: linear-gradient(135deg, #d2c5b8, #cab79d);
+}
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  margin: 0;
+  color: #5d4a3d;
+}
+.menu-strip a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #5d4a3d;
+  transition: color 0.3s;
+}
+.menu-strip a:hover {
+  color: #8b7c6d;
+}
+.content {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 8px;
+}
+h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  margin-top: 20px;
+  color: #4d3b2b;
+}
+h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #5d4a3d;
+}
+p {
+  line-height: 1.5;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
+
+<!-- Инициализация AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // время анимации
+    easing: 'ease-out-cubic', // стиль easing
+    once: true, // повторять анимацию при прокрутке?
+  });
+</script>
+
+<!-- Информация в левом верхнем углу -->
+<div class="header-info" data-aos="fade-down" data-aos-delay="100">
+  📞 +7 (908) 699-00-29 ✉ Россия, Лебедянь, "Карась" доставка еды Лебедянь.
+</div>
+
+<!-- Заголовок и полоска -->
+<div class="strip top-strip" data-aos="fade-right" data-aos-delay="200">
+  <h1>Контакты "Карась"</h1>
+</div>
+
+<!-- Меню или навигация -->
+<div class="strip menu-strip" data-aos="fade-left" data-aos-delay="300">
+  <a href="index.html">Главная</a>
+  <a href="menu.html">Меню</a>
+  <a href="about.html">О нас</a>
+  <a href="contacts.html">Контакты</a>
+</div>
+
+<!-- Контент -->
+<div class="content" data-aos="fade-up" data-aos-delay="400">
+  <h2>Наши контакты</h2>
+  <p><strong>Адрес:</strong> ул. Тульская, д. 7, Лебедянь</p>
+  <p><strong>Режим работы:</strong> ежедневно с 11:00 до 22:00</p>
+  <p><strong>Телефон:</strong> +7 (908) 699-00-29</p>
+  <p><strong>Бесплатная доставка при заказе на сумму от 1000 рублей</strong></p>
+  <p><strong>Email:</strong> <a href="mailto:info@karas-cafe.ru" style="color:#5d4a3d; text-decoration:underline;">info@karas-cafe.ru</a></p>
+  
+  <h3>Посмотреть на карте</h3>
+  <iframe
+    src="https://www.google.com/maps?q=ул.+Тульская,+д.+7,+Лебедянь&output=embed"
+    allowfullscreen=""
+    loading="lazy"></iframe>
+</div>
+
+</body>
+</html>
