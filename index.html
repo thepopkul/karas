@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Главная - Кафе "Карась"</title>
+<!-- Добавлена иконка сайта (favicon) -->
+<link rel="icon" type="image/x-icon" href="favicon/icon.ico">
+<link rel="shortcut icon" href="favicon/icon.ico" type="image/x-icon">
+<!-- Шрифт -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+<!-- Анимации -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+<style>
+@media(max-width: 600px) {
+  .header-top {
+    padding: 8px 10px;
+  }
+  .content {
+    margin: 30px auto 40px;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
+
+/* Общие стили */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f5f0e6, #eae3d8);
+  margin: 0;
+  padding-top: 0;
+  color: #4d3b2b;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Обертка для заголовка и полоски */
+.header-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+/* Полоска */
+.top-strip {
+  background: linear-gradient(135deg, #dad4c0, #e7ddcf);
+  height: 150px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Заголовок */
+.header-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  margin-top: -130px;
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  color: #5d4a3d;
+  max-width: 100%;
+}
+
+/* Контакт info */
+.header-info {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255,255,255,0.8);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 3;
+}
+
+/* Навигация */
+.nav {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #d2c5b8, #cab79d);
+  padding: 12px 0;
+}
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #4d3b2b;
+  transition: color 0.3s;
+}
+.nav a:hover {
+  color: #8b7c6d;
+}
+
+/* Основной контент */
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 8px;
+  line-height: 1.5;
+  font-size: 1.1em;
+  color: #4d3b2b;
+}
+h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  margin-top: 20px;
+  color: #4d3b2b;
+}
+
+/* Блок отзывов */
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+.review {
+  background: #fff8f0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.review p {
+  margin: 0;
+}
+
+/* ===== КОД ДЛЯ ФОТОГРАФИЙ ПО БОКАМ ===== */
+/* Основной контейнер для страницы, чтобы разместить фото и контент в ряд */
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+/* Левая и правая колонки для фотографий */
+.side-photo {
+  flex: 0 0 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 30px 0;
+  background-color: #cab79d; /* резервный фон */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Центральный блок с контентом */
+.center-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column;
+  }
+  .side-photo {
+    flex-basis: auto;
+    width: 100%;
+    min-height: 250px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .side-photo {
+    min-height: 200px;
+  }
+}
+</style>
+</head>
+<body data-aos-easing="ease-out-cubic">
+
+<!-- Анимации -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- Обертка с полоской и заголовком -->
+<div class="header-wrapper">
+  <div class="top-strip"></div>
+  <h1 class="header-title" data-aos="fade-down">
+    Куда пойти, чтобы накормить компанию? Конечно, в «Карась»! 🐟🍕🍜
+  </h1>
+</div>
+
+<!-- Контакт -->
+<div class="header-info">
+  📞 +7 (908) 699-00-29 ✉️ Россия, Лебедянь, "Карась" доставка еды Лебедянь.
+</div>
+
+<!-- Навигация -->
+<div class="nav">
+  <a href="index.html">Главная</a>
+  <a href="menu.html">Меню</a>
+  <a href="about.html">О нас</a>
+  <a href="contacts.html">Контакты</a>
+</div>
+
+<!-- ===== ОСНОВНАЯ ЧАСТЬ С ФОТО ПО БОКАМ ===== -->
+<div class="main-layout">
+  <!-- Левая фотография (karas5.jpg из папки images) -->
+  <div class="side-photo" style="background-image: url('images/karas5.jpg');" data-aos="fade-right"></div>
+  
+  <!-- Центральный блок с контентом -->
+  <div class="center-content">
+    <!-- Основной текст -->
+    <div class="content" data-aos="fade-in">
+      <p>Наше меню создано для того, чтобы удивить и порадовать каждого. Даже если вы никак не можете выбрать между Италией и Азией.</p>
+      <p>С одной стороны — паназиатское меню: легендарные блюда WOK с лапшой и сочной курицей/морепродуктами и аутентичный Тяхан.</p>
+      <p>С другой — настоящая пиццерия с огромным выбором! У нас есть пицца:</p>
+      <ul>
+        <li>🔹 На белом соусе (нежная «Карбонара» и сытная «Домашняя»).</li>
+        <li>🔹 На красном соусе (сочная «Феерия» и «Гавайская» с сырным бортом).</li>
+        <li>🔹 На молочной основе (попробуйте «Мексиканскую» или «Гавайскую»).</li>
+      </ul>
+      <p>А ещё у нас есть выгодные предложения, от которых невозможно отказаться:</p>
+      <ul>
+        <li>🔥 3 пиццы по 30 см всего за 1500 рублей!</li>
+        <li>🔥 2 пиццы за 1100 рублей.</li>
+        <li>🍟 Джуниор Пак — набор для компании: пицца, наггетсы, картофель и соусы.</li>
+      </ul>
+      <p>Не хочешь никуда идти? Закажи доставку! Она бесплатна при заказе от 1000 рублей.</p>
+    </div>
+
+    <!-- Раздел с отзывами -->
+    <div class="content" id="reviews" data-aos="fade-up">
+      <h2>Отзывы клиентов</h2>
+      <div class="reviews-container">
+        <!-- Отзывы -->
+        <div class="review">
+          <p>🌟 Побывала с семьей в данной пиццерии, очень вкусная пицца, все свежее, очень вежливый обслуживающий персонал. В общем, остались только приятные впечатления от этого заведения! Однозначно придем туда еще и не раз! - Алина</p>
+          <small>- Алина</small>
+        </div>
+        <div class="review">
+          <p>Большое спасибо за вкуснейшую пиццу, она была идеальная 😍🍕!!!!!! Девочкам спасибо за отлично проделанную работу 👍👍👍 - Екатерина</p>
+          <small>- Екатерина</small>
+        </div>
+      </div>
+      <p style="margin-top: 15px; font-weight: bold;">
+        Оставить отзыв вы можете в нашей группе <a href="https://vk.com/karas_lebedyan?from=groups" target="_blank" rel="noopener noreferrer" style="color: #4A76A8; font-weight: bold; text-decoration: underline;">Вконтакте</a>
+      </p>
+    </div>
+  </div> <!-- Конец center-content -->
+
+  <!-- Правая фотография (karas6.jpg из папки images) -->
+  <div class="side-photo" style="background-image: url('images/karas6.jpg');" data-aos="fade-left"></div>
+</div> <!-- Конец main-layout -->
+
+</body>
+</html>
