@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Меню - Кафе "Карась"</title>
+<!-- Шрифт -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+<!-- Анимации -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+<style>
+@media(max-width: 600px) {
+  .header-top {
+    padding: 8px 10px;
+  }
+  .content {
+    margin: 80px auto 40px;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+  .menu-photos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-photos a {
+    max-width: 90vw;
+    margin-bottom: 20px;
+  }
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f5f0e6, #eae3d8);
+  margin: 0;
+  padding: 0;
+  color: #4d3b2b;
+}
+.header-info {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.strip {
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.top-strip {
+  background: linear-gradient(135deg, #dad4c0, #e7ddcf);
+}
+.menu-strip {
+  background: linear-gradient(135deg, #d2c5b8, #cab79d);
+}
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  margin: 0;
+  color: #5d4a3d;
+}
+.menu-strip a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #5d4a3d;
+  transition: color 0.3s;
+}
+.menu-strip a:hover {
+  color: #8b7c6d;
+}
+.content {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 8px;
+}
+h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  margin-top: 20px;
+  color: #4d3b2b;
+}
+
+/* Стиль для фото меню */
+.menu-photos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+.menu-photos a {
+  max-width: 420px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  display: block;
+}
+.menu-photos a:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.menu-photos img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<!-- Инициализация AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-out-cubic',
+    once: true,
+  });
+</script>
+
+<!-- Информация в левом верхнем углу -->
+<div class="header-info" data-aos="fade-down" data-aos-delay="100">
+  📞 +7 (908) 699-00-29 ✉ Россия, Лебедянь, "Карась" доставка еды Лебедянь.
+</div>
+
+<!-- Заголовки и меню навигации -->
+<div class="strip top-strip" data-aos="fade-right" data-aos-delay="200">
+  <h1>Меню "Карась"</h1>
+</div>
+
+<div class="strip menu-strip" data-aos="fade-left" data-aos-delay="300">
+  <a href="index.html">Главная</a>
+  <a href="menu.html">Меню</a>
+  <a href="about.html">О нас</a>
+  <a href="contacts.html">Контакты</a>
+</div>
+
+<div class="content" data-aos="fade-up" data-aos-delay="400">
+  <h2>Изысканная простота в каждой порции</h2>
+  <p>
+    КОРОЧЕ ЦЕНЫ ПИЗДА ДОРОГИЕ
+  </p>
+
+  <h2>Наше меню</h2>
+
+  <!-- Фотографии меню -->
+  <div class="menu-photos" data-aos="zoom-in" data-aos-delay="450">
+    <a href="images/menu1.jpg" target="_blank" rel="noopener" title="Меню 1">
+      <img src="images/menu1.jpg" alt="Фото меню 1 — Кафе Карась" />
+    </a>
+    <a href="images/menu2.jpg" target="_blank" rel="noopener" title="Меню 2">
+      <img src="images/menu2.jpg" alt="Фото меню 2 — Кафе Карась" />
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>
